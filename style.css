@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./istockphoto-1478776181-640x640.jpg);
+    background-position:  center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border: 1px solid red;
+}
+
+
+.wrapper {
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(19, 150, 73);
+    width: 1000px;
+    height: 400px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 30px 2px gray;
+    padding: 3rem;
+    position: relative;
+}
+
+.wrapper .number-thought {
+    width: 650px;
+    font-size: 35px;
+    text-align: center;
+}
+
+.wrapper .guess-number{
+    width: 100px;
+    height: 80px;
+    font-size: 40px;
+    text-align: center;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    color: green;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.marks {
+    display: flex;
+    position: absolute;
+    right: 40%;
+    top: 37%; 
+}
+
+.wrapper .marks .mark {
+
+}
+
+.danger, .confrim {
+    display: none;
+}
+
+
+.danger {
+   font-size: 65px;
+   color: rgb(230, 0, 0);
+}
+
+.confrim {
+   font-size: 65px;
+   color: rgb(50, 0, 230);
+}
+
+.reset-btn-btn {
+    display: flex;
+} 
+
+.wrapper .btn,
+.wrapper .reset-btn {
+    padding: .5rem 2rem;
+    font-size: 25px;
+    background: rgb(221, 181, 4);
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: white;
+    border-radius: 10px;
+    transition: 300ms ease-in-out;
+}
+
+.btn:hover,
+.reset-btn:hover {
+    opacity: .8;
+}
+
+.reset-btn.active {
+    background: blue;
+    display: none;
+}
+
+.general-container.reset .reset-btn {
+    display: block;
+}
+
+.general-container.reset .btn {
+    display: none;
+}
+
+.general-container:not(.reset) .reset-btn {
+    display: none;
+}
+
+.general-container:not(.reset) .btn {
+    display: block;
+}
+
+
+.wrapper .alert {
+    font-size: 20px;
+    text-align: center;
+    width: 500px;
+    display: none;
+}
+
+@media (max-width:1536px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+@media (max-width:1280px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+@media (max-width:1024px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        max-width: 640px;
+    }
+
+    .wrapper .number-thought {
+        font-size: 30px;
+    }
+}
+
+@media (max-width:640px) {
+    .container {
+        max-width: 475px;
+    }
+
+    .wrapper .number-thought {
+        font-size: 25px;
+        width: 400px;
+    }
+}
+
+@media (max-width:475px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .wrapper .number-thought {
+        font-size: 20px;
+        width: 350px;
+    }
+}
